@@ -1,0 +1,705 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav img {
+    width: 80px;
+}
+.nav-list ul{
+    display: flex;
+    list-style: none;
+}
+.nav-list ul li {
+    margin-right: 30px;
+}
+.nav-list ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.nav-list ul li a::after {
+    content: '';
+    margin: 0 auto;
+    width: 0;
+    height: 3px;
+    display: block;
+    background-color: rgb(249, 170, 23);
+    transition: all 0.5s ease;
+}
+.nav-list ul li a:hover::after {
+    width: 100%;
+}
+.icons i {
+    margin-right: 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-size: 0.8rem;  
+}
+.icons i:hover {
+    color: rgb(249, 170, 23);
+}
+.hamburgerMenu {
+    cursor: pointer;
+    display: none;
+}
+.hamburgerMenu .line {
+    width: 40px;
+    height: 4px;
+    background-color: black;
+    display: block;
+    margin: 7px 0;
+}
+/* main section and about section */
+.mainContainer,.aboutContainer {
+    width: 80%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.aboutContainer {
+    height: auto;
+}
+.mainContainer .left,
+.aboutContainer .left {
+    width: 50%;
+}
+.mainContainer .left h1,
+.aboutContainer .right h1,
+#menu h1 {
+    font-size: 3rem;
+}
+.mainContainer .left p,
+.aboutContainer .right p {
+    text-align: justify;
+    font-size: 0.9rem;
+    line-height: 25px;
+}
+.mainContainer .left span,
+.aboutContainer .right span
+{
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(249, 170, 23);
+}
+.btn {
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    background-color: rgb(249, 170, 23);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 100px;
+    transition: all 0.5s ease;
+}
+.btn:hover {
+    background-color: rgb(249, 200, 41);
+}
+.mainContainer .right img,
+.aboutContainer .left img{
+    width: 100%;
+}
+.aboutContainer .right {
+    width: 50%;
+}
+.aboutContainer .right h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* Menu section */
+#menu h1 {
+   text-align: center;
+}
+#menu span,
+#gallery span,
+#review span,
+#order span,
+#team span  {
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(249, 170, 23);
+    border-bottom: 2px solid rgb(249, 170, 23);
+}
+#menu .gridContainer {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    overflow: hidden;
+}
+#menu .foodCard {
+    width: 320px;
+    height: 480px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+#menu .foodCard .menuImage {
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#menu .foodCard img {
+    width: 100%;
+    height: 100%;
+}
+#menu .foodCard h4 {
+    color: rgb(249, 170, 23);
+    font-size: 1.2rem;
+    margin: 10px;
+}
+#menu .foodCard p {
+    font-size: 0.8rem;
+}
+#menu .foodCard .price{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.fa-solid {
+    color: rgb(249, 170, 23);
+    font-size: 0.8rem;
+}
+#menu .foodCard .foodBtn {
+    margin-top: 20px;
+    background-color: black;
+    color: #fff;
+    padding: 7px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border: none;
+}
+#menu .foodCard .foodBtn:hover {
+    background-color: rgb(249, 170, 23);
+}
+.heart {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    top: -240px;
+    float: right;
+    right: -20px;
+    opacity: 0;
+    border-radius: 7px;
+    transition: all 0.5s ease;
+}
+#menu .foodCard:hover .heart {
+    opacity: 1;
+    position: relative;
+    top: -240px;
+    right: 20px;
+}
+.heart .fa-solid {
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 50px;
+    text-shadow: 0 0 6px black;
+}
+
+/* Gallery section */
+#gallery h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 10%;
+}
+#gallery .galleryContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#gallery .galleryContainer .galleryImage {
+    position: relative;
+    background-color: black;
+    z-index: 1;
+}
+#gallery .galleryContainer .galleryImage img{
+   width: 100%;
+   height: 100%;
+   transition: 0.3s;
+}
+#gallery .galleryContainer .galleryImage:hover img {
+    opacity: 0.4;
+}
+#gallery .galleryContainer .galleryImage h3 {
+    position: absolute;
+    top: 50px;
+    left: 40%;
+    font-size: 1.8rem;
+    color: rgb(249, 170, 23);
+    font-family: 'Permanent Marker', cursive;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+#gallery .galleryContainer .galleryImage:hover h3 {
+    opacity: 1;
+}
+#gallery .galleryContainer .galleryImage p {
+    color: #fff;
+    position: absolute;
+    top: 130px;
+    font-size: 0.8rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+#gallery .galleryContainer .galleryImage:hover p {
+    opacity: 1;
+}
+#gallery .galleryContainer .galleryImage button {
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    background-color: rgb(249, 170, 23);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all 0.5s ease;
+    position: absolute;
+    z-index: 2;
+    top: 200px;
+    left: 35%;
+    opacity: 0;
+}
+#gallery .galleryContainer .galleryImage button:hover {
+    background-color: rgb(249, 200, 41);
+}
+#gallery .galleryContainer .galleryImage:hover button {
+    opacity: 1;
+}
+
+/* Review section */
+#review {
+    width: 100%;
+    padding: 100px 0;
+}
+#review h1,
+#order h1,
+#team h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+#review .reviewContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+#review .reviewContainer .reviewCard {
+    width: 320px;
+    height: auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 50px;
+}
+#review .reviewContainer .reviewCard img {
+    width: 35%;
+    border-radius: 100%;
+    border: 5px solid #ccc;
+    border-radius: 100%;
+    transition: all 0.5s ease;
+}
+#review .reviewContainer .reviewCard:hover img {
+    transform: translateY(-60px);
+}
+#review .reviewContainer .reviewCard h3 {
+    margin: 0;
+    transition: all 0.5s ease;
+}
+#review .reviewContainer .reviewCard:hover h3 {
+    transform: translateY(-50px);
+}
+#review .reviewContainer .reviewCard .reviewIcons {
+    transition: all 0.5s ease;
+}
+#review .reviewContainer .reviewCard:hover .reviewIcons {
+    transform: translateY(-30px);
+}
+#review .reviewContainer .reviewCard .socials {
+    margin: 20px 10px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+#review .reviewContainer .reviewCard:hover .socials {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+#review .reviewContainer .reviewCard p {
+    font-size: 0.9rem;
+    line-height: 25px;
+}
+/* Order section */
+#order {
+    width: 100%;
+    padding: 100px 0;
+    background-image: url(images/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#order .orderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+}
+#order .orderContainer .orderImage img {
+    width: 600px;
+}
+#order .orderContainer .orderForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 10px;
+}
+#order .orderContainer .orderForm label {
+    display: block;
+}
+#order .orderContainer .orderForm .input {
+    margin: 5px;
+}
+#order .orderContainer .orderForm .input input {
+    width: 300px;
+    height: 35px;
+    padding: 0px 10px;
+    border: 2px solid #ccc;
+    background-color: #eee;
+    outline: none;
+    border-radius: 3px;
+}
+#order .orderContainer .orderForm .input input:focus {
+    border: 2px solid rgb(249, 170, 23);
+}
+#order .orderContainer .orderForm .btn {
+    margin: 30px 5px;
+}
+/* team section */
+#team {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bg1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#team .teamContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 90%;
+    margin: 80px auto;
+}
+#team .teamContainer .teamImage {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+}
+#team .teamContainer .teamImage:hover {
+    border-radius: 20px;
+    height: 440px;
+}
+#team .teamContainer .teamImage img {
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+#team .teamContainer .teamImage:hover img {
+    border-radius: 20px;
+    margin-top: -250px;
+}
+#team .teamContainer .teamImage .info {
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    transition: all 0.4s ease;
+}
+#team .teamContainer .teamImage:hover .info {
+    top: 60%;
+}
+#team .teamContainer .teamImage .info h2 {
+    margin: 0;
+    color: rgb(249, 170, 23);
+}
+#team .teamContainer .teamImage .info p {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+#team .teamContainer .teamImage .info .teamIcon i{
+    color: rgb(249, 170, 23);
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: all 0.4s ease;
+}
+#team .teamContainer .teamImage .info .teamIcon i:hover {
+    color: rgb(249, 200, 41);
+}
+/* footer section */
+#footer {
+    width: 100%;
+    background-color: #ccc;
+}
+#footer .footerContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    margin: 0 auto;
+}
+#footer .footerContainer .footerTag {
+    width: 100%;
+    text-align: center;
+}
+#footer .footerContainer .footerTag h3{
+    font-size: 1.5rem;
+}
+#footer .footerContainer .footerTag ul {
+    padding: 0;
+}
+#footer .footerContainer .footerTag ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+#footer .footerContainer .footerTag ul li a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s ease;
+}
+#footer .footerContainer .footerTag ul li a:hover,
+#footer .footerContainer .footerTag i:hover {
+    color: rgb(249, 170, 23);
+}
+#footer .footerContainer .footerTag i{
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 0.9rem;
+    transition: all 0.5s ease;
+}
+#footer .footerContainer .footerText {
+    grid-column: span 5;
+    text-align: center;
+}
+#footer .footerContainer .footerText span {
+    color: rgb(249, 170, 23);
+}
+@media screen and (max-width: 1250px) {
+    .mainContainer .left h1,
+    .aboutContainer .right h1,
+    #menu h1 {
+        font-size: 2rem;
+    }
+    #menu .gridContainer,
+    #gallery .galleryContainer,
+    #review .reviewContainer
+     {
+        width: 95%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+    #order .orderContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    #order .orderContainer .orderImage,
+    #order .orderContainer .orderForm {
+        width: 80%;
+    }
+    #gallery .galleryContainer .galleryImage h3 {
+        top: 10px;
+    }
+    #gallery .galleryContainer .galleryImage p {
+        top: 110px;
+        padding: 0 10px;
+    }
+    #gallery .galleryContainer .galleryImage button {
+        top: 160px;
+        left: 30%;
+    }
+    #team {
+        margin: 200px 0;
+    }
+    #team .teamContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 80px;
+    }
+    .mainContainer .right img,
+    .aboutContainer .left img {
+        width: 100%;
+        max-width: 100%; 
+    }
+}
+@media screen and (max-width: 1048px) {
+    .mainContainer .left h1 {
+        margin-top: 80px;
+    }
+    .aboutContainer .right h1 {
+        margin: 0;
+    }
+    .mainContainer .left p,
+    .aboutContainer .right p {
+        font-size: 0.8rem;
+    }
+    .mainContainer,
+    .aboutContainer {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .mainContainer .left,
+    .aboutContainer .right,
+    .aboutContainer .left {
+        width: 100%; 
+        text-align: center;
+    }
+    .mainContainer .right img,
+    .aboutContainer .left img {
+        width: 80%;
+        max-width: 100%; 
+    }
+    .aboutContainer .left img {
+        margin-top: 40px;
+    }
+    .btn {
+        margin: 10px;
+    }
+    #menu .gridContainer,
+    #gallery .galleryContainer,
+    #review .reviewContainer,
+    #team .teamContainer
+     {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav-list ul {
+        position: absolute;
+        top: 27px;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgb(249, 170, 23);
+        left: -120%;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .nav-list ul li {
+        margin: 5px;
+        width: 80%;
+    }
+    .hamburgerMenu {
+        display: block;
+    }
+    .hamburgerMenu.active .line:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburgerMenu.active .line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburgerMenu.active .line:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+    }
+    .nav-list.active ul {
+        left: 0;
+    };
+    .mainContainer .left h1,
+    #menu h1,
+    #gallery h1,
+    #review h1,
+    #order h1,
+    #team h1 {
+        font-size: 2rem; 
+    }
+    #gallery .galleryContainer .galleryImage h3 {
+        top: 10px;
+    }
+    #gallery .galleryContainer .galleryImage p {
+        top: 110px;
+        padding: 0 10px;
+    }
+    #gallery .galleryContainer .galleryImage button {
+        top: 160px;
+        left: 30%;
+    }
+    #menu .gridContainer,
+    #gallery .galleryContainer,
+    #review .reviewContainer
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #order .orderContainer .orderImage img {
+        width: 400px;
+    }
+    #order .orderContainer .orderForm,
+    #team .teamContainer
+     {
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin: 0 auto;
+    }
+    #order .orderContainer .orderForm .input input {
+        width: 100%;
+    }
+    #team {
+        height: 100%;
+        margin: 80px 0;
+    }
+    #footer .footerContainer .footerTag{
+        grid-column: 1/6;
+    }
+    #footer .footerContainer .footerTag h3 {
+        font-size: 1rem;
+    }
+    #footer .footerContainer .footerTag a,p {
+        font-size: 0.8rem;
+    }
+}
+
+
+
